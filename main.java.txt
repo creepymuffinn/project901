@@ -1,0 +1,13 @@
+public class Main {
+    public static void main(String[] args) {
+        Coffee simpleCoffee = new Espresso();
+        System.out.println("Description: " + simpleCoffee.getDescription() + ", Cost: $" + simpleCoffee.cost());
+
+        Coffee latteWithMilk = new MilkDecorator(new Latte());
+        System.out.println("Description: " + latteWithMilk.getDescription() + ", Cost: $" + latteWithMilk.cost());
+
+        Coffee latteWithSugar = new SugarDecorator(new Latte());
+        System.out.println("Description: " + latteWithSugar.getDescription() + ", Cost: $" + latteWithSugar.cost());
+    }
+}
+
